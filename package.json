@@ -1,8 +1,10 @@
 {
   "name": "uni-preset-vue",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
-    "start": "uni",
+    "dev": "uni",
+    "build": "uni build",
+    "upversion": "npm --no-git-tag-version version patch",
     "dev:app": "uni -p app",
     "dev:custom": "uni -p",
     "dev:h5": "uni",
@@ -30,7 +32,9 @@
     "build:mp-weixin": "uni build -p mp-weixin",
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
-    "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
+    "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "lint": "eslint --cache --max-warnings 0  \"src/**/*.{vue,ts}\" --fix",
+    "prettier": "prettier --write \"src/**/*.{js,ts,json,css,scss,vue}\""
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3040820220424001",
@@ -46,8 +50,11 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3040820220424001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3040820220424001",
     "core-js": "^3.8.3",
+    "crypto-js": "^4.1.1",
+    "lodash-es": "^4.17.21",
     "pinia": "^2.0.14",
     "pinia-plugin-persist": "^1.0.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue": "^3.2.37",
     "vuex": "^4.0.2"
   },
@@ -60,7 +67,6 @@
     "sass": "^1.52.3",
     "typescript": "^4.7.3",
     "unplugin-auto-import": "^0.8.7",
-    "vite": "^2.9.9",
-    "vite-plugin-vue-setup-extend": "^0.4.0"
+    "vite": "^2.9.9"
   }
 }

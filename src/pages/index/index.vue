@@ -1,39 +1,49 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import { router } from '@/utils/router';
+
+const title = ref('uni-app vue3 ts --Vite');
+const list = ref(['未付款', '待评价', '已付款'])
+const current = ref(1)
+
+const handleGetStarted = () => {
+  router.pushTab('/pages/demo/index');
+};
+
+</script>
 <template>
   <view class="content">
-    <zpButton @click="openModal">点我</zpButton>
-    <zpModal :options="modalOption" :modelValue="modalShow" />
-
+    <u-subsection style="width: 100%" inactive-color="#fafafa" active-color="#2979ff" :list="list" mode="subsection"
+      :current="current"></u-subsection>
+    <image class="logo" src="/static/svg/LOGO.svg" />
+    <view class="text-area">
+      <text class="">{{ title }}</text>
+    </view>
+    <u-button @click="handleGetStarted">Get Started → </u-button>
   </view>
 </template>
-
-<script setup lang="ts">
-import zpModal, { IOptionItem } from '@/components/zp-ui/components/zp-modal/zp-modal.vue'
-import zpButton from '@/components/zp-ui/components/zp-button/zp-button.vue'
-const modalShow = ref(false)
-const modalOption = ref<IOptionItem[]>([
-  {
-    text: '取消', style: { color: '#0097ff' }, end: () => {
-      uni.showToast({
-        title: '取消了',
-        icon: 'none'
-      })
-      modalShow.value = false
-    }
-  },
-  {
-    text: '确定', style: { color: '#0097ff', 'font-weight': 'bold' }, end: () => {
-      uni.showToast({
-        title: '确定了',
-        icon: 'none'
-      })
-      modalShow.value = false
-    }
-  },
-])
-const openModal = () => {
-  modalShow.value = true
+<style lang="scss">
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-</script>
 
-<style>
+.logo {
+  height: 200rpx;
+  width: 200rpx;
+  margin: 280rpx auto 50rpx;
+}
+
+.text-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  color: #8f8f94;
+}
 </style>
