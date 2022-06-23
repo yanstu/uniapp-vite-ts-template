@@ -16,6 +16,12 @@ onHide(() => {
   console.log('App Hide');
 });
 </script>
+
+<style>
+@import '@/assets/style/colorui/main.css';
+@import '@/assets/style/colorui/icon.css';
+@import '@/assets/style/colorui/animation.css';
+</style>
 <style lang="scss">
 @import "./uni_modules/vk-uview-ui/index.scss";
 
