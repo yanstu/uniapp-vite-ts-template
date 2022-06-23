@@ -10,7 +10,8 @@
       "path": "pages/demo/index",
       "style": {
         "navigationBarTitleText": "Demo"
-      }
+      },
+      "needLogin": true
     },
     {
       "path": "pages/about/index",
@@ -23,13 +24,6 @@
       "style": {
         "navigationBarTitleText": "登录"
       }
-    },
-    {
-      "path": "pages/log/index",
-      "style": {
-        "navigationBarTitleText": "日志"
-      },
-      "needLogin": true
     },
     {
       "path": "pages/notFound/404",
