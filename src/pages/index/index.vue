@@ -13,13 +13,11 @@ const handleGetStarted = () => {
 </script>
 <template>
   <view class="content">
-    <u-subsection style="width: 100%" inactive-color="#fafafa" active-color="#2979ff" :list="list" mode="subsection"
-      :current="current"></u-subsection>
     <image class="logo" src="/static/svg/LOGO.svg" />
     <view class="text-area">
       <text class="">{{ title }}</text>
     </view>
-    <u-button @click="handleGetStarted">Get Started → </u-button>
+    <van-button type="primary" @click="handleGetStarted">Get Started → </van-button>
   </view>
 </template>
 <style lang="scss">
