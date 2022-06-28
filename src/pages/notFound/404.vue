@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { onLoad } from '@dcloudio/uni-app';
-import { ref } from 'vue';
 import { router } from '@/utils/router';
 
 const go = ref<string>('');

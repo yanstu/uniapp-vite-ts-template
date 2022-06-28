@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 //托管到dist目录(打包)
-app.use(express.static('../dist'));
+app.use(express.static('../dist/build/h5'));
 
 // 导出app实例
 module.exports = app;
