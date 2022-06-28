@@ -65,11 +65,5 @@
         "selectedIconPath": "static/images/tabBar/selectedAbout.png"
       }
     ]
-  },
-  "easycom": {
-    "autoscan": true,
-    "custom": {
-      "^u-(.*)": "/node_modules/vk-uview-ui/components/u-$1/u-$1.vue"
-    }
   }
 }

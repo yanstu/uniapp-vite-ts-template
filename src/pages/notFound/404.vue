@@ -25,7 +25,7 @@ const backHome = () => {
     <view class="mb-40rpx">
       <text>{{ go }} 页面找不到了~</text>
     </view>
-    <u-button @click="backHome">返回首页</u-button>
+    <van-button @click="backHome">返回首页</van-button>
   </view>
 </template>
 

@@ -28,10 +28,10 @@
       </view>
       <view class="desc">{{ isLogin ? '测试' : '未登入' }}</view>
     </view>
-    <view class="cell"><u-button @click="handleJump('/pages/log/index')">log</u-button></view>
-    <view class="cell" v-if="isLogin"><u-button @click="handleLoginOut">登出</u-button></view>
+    <view class="cell"><van-button @click="handleJump('/pages/log/index')">log</van-button></view>
+    <view class="cell" v-if="isLogin"><van-button @click="handleLoginOut">登出</van-button></view>
     <view class="cell" v-else
-      ><u-button @click="handleJump('/pages/login/index')">登入</u-button></view
+      ><van-button @click="handleJump('/pages/login/index')">登入</van-button></view
     >
   </view>
 </template>
